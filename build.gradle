@@ -4,9 +4,19 @@ group = 'run.anx'
 def releaseVersion = version.toString()
 
 repositories {
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'paperMcForBungeeApi'
+                url = 'https://repo.papermc.io/repository/maven-public/'
+            }
+        }
+        filter {
+            includeGroup 'net.md-5'
+            includeGroup 'com.mojang'
+        }
+    }
     mavenCentral()
-    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
-    maven { url = 'https://repo.md-5.net/content/repositories/releases/' }
 }
 
 dependencies {
