@@ -1,0 +1,6 @@
+name: ANXNetworkBridge
+main: run.anx.bridge.BungeeBridge
+version: 1.0.0
+author: anx.run
+description: Sends aggregated network statistics to anx.run
+softDepends: [floodgate, Geyser-BungeeCord]
